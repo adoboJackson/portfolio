@@ -1,0 +1,183 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.blocky, .col-1, .col-2, .col-3, .col-4 {
+  display: block;
+  color: white;
+  float: left;
+}
+
+.col-1 {
+  width: 25%;
+}
+
+.spacer-left-1 {
+  margin-left: 25%;
+}
+
+.spacer-right-1 {
+  margin-right: 25%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.spacer-left-2 {
+  margin-left: 50%;
+}
+
+.spacer-right-2 {
+  margin-right: 50%;
+}
+
+.col-3 {
+  width: 75%;
+}
+
+.spacer-left-3 {
+  margin-left: 75%;
+}
+
+.spacer-right-3 {
+  margin-right: 75%;
+}
+
+.col-4 {
+  width: 100%;
+}
+
+.spacer-left-4 {
+  margin-left: 100%;
+}
+
+.spacer-right-4 {
+  margin-right: 100%;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Abel', sans-serif;
+}
+
+h1 {
+  position: absolute;
+  width: 600px;
+  font-size: 3em;
+  color: #2b2b2b;
+  font-weight: normal;
+}
+
+h6 {
+  text-transform: uppercase;
+}
+
+.nav-container {
+  position: fixed;
+  bottom: 20px;
+  transform: rotate(-90deg);
+}
+
+nav {
+  position: absolute;
+  margin: 20px;
+  width: 300px;
+  top: 10px;
+  left: 300px;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav__button {
+  color: #2b2b2b;
+  display: block;
+  padding: 0 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav__button:hover {
+  background: #9cf7f6;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row no-wrap;
+}
+
+.identity-container {
+  flex-grow: 1;
+  width: 30%;
+}
+
+.example-container {
+  flex-grow: 2;
+  width: 70%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+.row-container {
+  display: block;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-link {
+  font-size: 0;
+  position: relative;
+}
+
+figure {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #2b2b2b;
+}
+figure:hover figcaption {
+  bottom: 0;
+  border: red;
+}
+figure:hover img {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+figure figcaption {
+  font-size: 20px;
+  padding: .5em;
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  bottom: -100px;
+  width: inherit;
+  transition: bottom .5s ease-out;
+}
+
+img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  width: 100%;
+  transition: all .5s ease-out;
+}
